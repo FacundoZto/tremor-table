@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #0078d7;
+  font-size: 2rem;
+}

@@ -1,10 +1,10 @@
-import Example from './components/Users'
+import {UserTable} from './components/UserTable';
 
 function App() {
 
   return (
     <>
-      <Example/>
+      <UserTable/>
     </>
   )
 }
