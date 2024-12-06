@@ -8,11 +8,10 @@ import {
   TableRoot,
   TableRow,
 } from "./Table";
-import { useSelector } from "react-redux";
-import { RootState } from "../store/store";
+import { useAppSelector } from "../Hooks/store";
 
 export function UserTable() {
-  const users = useSelector((state: RootState) => state.users);
+  const users = useAppSelector((state) => state.users);
 
   return (
     <div className="w-full">
