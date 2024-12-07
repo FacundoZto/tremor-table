@@ -9,9 +9,11 @@ import {
   TableRow,
 } from "./Table";
 import { useAppSelector } from "../Hooks/store";
+import { useUserActions } from "../Hooks/userActions";
 
 export function UserTable() {
   const users = useAppSelector((state) => state.users);
+  const { handleDelete } = useUserActions();
 
   return (
     <div className="w-full">
@@ -62,8 +64,9 @@ export function UserTable() {
                       />
                     </svg>
                   </button>
-                  <button type="button">
+                  <button type="button" onClick={() => handleDelete(item.id.value)}>
                     <svg
+                    aria-label="Remove element"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"

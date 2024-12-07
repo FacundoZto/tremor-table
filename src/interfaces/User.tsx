@@ -1,7 +1,7 @@
 export interface User {
   id: {
-    name?: string;
-    value?: string;
+    name: string;
+    value: string;
   },
   name: {
     title?: string;
