@@ -8,8 +8,8 @@ import {
   TableRoot,
   TableRow,
 } from "./Table";
-import { useAppSelector } from "../Hooks/store";
-import { useUserActions } from "../Hooks/userActions";
+import { useAppSelector } from "../hooks/store";
+import { useUserActions } from "../hooks/userActions";
 
 export function UserTable() {
   const users = useAppSelector((state) => state.users);

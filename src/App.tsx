@@ -1,3 +1,4 @@
+import { NewUser } from './components/NewUser';
 import {UserTable} from './components/UserTable';
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
       <UserTable/>
+      <NewUser  />
     </>
   )
 }
