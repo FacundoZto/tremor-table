@@ -3,10 +3,7 @@ import { User } from "../../interfaces/User";
 
 const defaultState = [
   {
-    id: {
-      name: "SSN",
-      value: "405-88-3636",
-    },
+    id: "405-88-3636",
     name: {
       title: "Miss",
       first: "Jane",
@@ -25,10 +22,7 @@ const defaultState = [
     }
   },
   {
-    id: {
-      name: "SDN",
-      value: "405-04-3636",
-    },
+    id: "405-04-3636",
     name: {
       title: "Miss",
       first: "Prueba",
@@ -58,13 +52,17 @@ const userSlice = createSlice({
   name: 'users',
   initialState,
   reducers: {
+    addNewUser: (state, action: PayloadAction<User>) => {
+      const id = crypto.randomUUID();
+      return [...state, { ...action.payload, id}];
+    },
     deleteUser: (state, action: PayloadAction<string>) => {
       const id = action.payload;
-      return state.filter((user) => user.id.value !== id);
+      return state.filter((user) => user.id !== id);
     },
   },
 });
 
 export default userSlice.reducer;
 
-export const { deleteUser } = userSlice.actions
+export const { addNewUser, deleteUser } = userSlice.actions

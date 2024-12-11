@@ -38,14 +38,14 @@ export function UserTable() {
           </TableHead>
           <TableBody>
             {users.map((item) => (
-              <TableRow key={item.id.value}>
+              <TableRow key={item.id}>
                 <TableCell>
-                  <img src={item.picture.thumbnail} alt="User" />
+                  <img src={item.picture?.thumbnail} alt="User" />
                 </TableCell>
-                <TableCell>{item.name.first}</TableCell>
+                <TableCell>{item.name?.first}</TableCell>
                 <TableCell>{item.gender}</TableCell>
-                <TableCell>{item.location.country}</TableCell>
-                <TableCell>{item.location.city}</TableCell>
+                <TableCell>{item.location?.country}</TableCell>
+                <TableCell>{item.location?.city}</TableCell>
                 <TableCell>{item.email}</TableCell>
                 <TableCell className="text-right">
                   <button type="button">
@@ -64,7 +64,7 @@ export function UserTable() {
                       />
                     </svg>
                   </button>
-                  <button type="button" onClick={() => handleDelete(item.id.value)}>
+                  <button type="button" onClick={() => handleDelete(item.id)}>
                     <svg
                     aria-label="Remove element"
                       xmlns="http://www.w3.org/2000/svg"
