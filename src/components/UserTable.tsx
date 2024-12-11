@@ -40,12 +40,11 @@ export function UserTable() {
             {users.map((item) => (
               <TableRow key={item.id}>
                 <TableCell>
-                  <img src={item.picture?.thumbnail} alt="User" />
+                  <img src={item.picture} alt="User" />
                 </TableCell>
-                <TableCell>{item.name?.first}</TableCell>
+                <TableCell>{item.name}</TableCell>
                 <TableCell>{item.gender}</TableCell>
-                <TableCell>{item.location?.country}</TableCell>
-                <TableCell>{item.location?.city}</TableCell>
+                <TableCell>{item.country}</TableCell>
                 <TableCell>{item.email}</TableCell>
                 <TableCell className="text-right">
                   <button type="button">

@@ -4,41 +4,19 @@ import { User } from "../../interfaces/User";
 const defaultState = [
   {
     id: "405-88-3636",
-    name: {
-      title: "Miss",
-      first: "Jane",
-      last: "Smith",
-    },
+    name: "Jane",
     gender: "female",
     email: "jennie.nichols@example.com",
-    location: {
-      city: "Billings",
-      state: "Michigan",
-      country: "United States",
-    },
-    picture: {
-      medium: "https://randomuser.me/api/portraits/med/men/75.jpg",
-      thumbnail: "https://randomuser.me/api/portraits/thumb/men/75.jpg",
-    }
+    country: "United States",
+    picture: "https://randomuser.me/api/portraits/thumb/men/75.jpg",
   },
   {
     id: "405-04-3636",
-    name: {
-      title: "Miss",
-      first: "Prueba",
-      last: "Smith",
-    },
-    gender: "female",
+    name: "Mark",
+    gender: "male",
     email: "judith.nichols@example.com",
-    location: {
-      city: "Madrid",
-      state: "Madrid",
-      country: "España",
-    },
-    picture: {
-      medium: "https://randomuser.me/api/portraits/med/men/75.jpg",
-      thumbnail: "https://randomuser.me/api/portraits/thumb/men/75.jpg",
-    }
+    country: "España",
+    picture: "https://randomuser.me/api/portraits/thumb/men/75.jpg",
   },
 ];
 
